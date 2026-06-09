@@ -19,9 +19,10 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: ./node_modules/.bin/ng build --base-href "/Chennai-Cremation/"
+      - run: npm run build -- --base-href "/Chennai-Cremation/"
       - name: Copy index.html to 404.html (SPA routing)
-        run: cp dist/*/browser/index.html dist/*/browser/404.html
+        run: |
+          for d in dist/*/browser; do cp "$d/index.html" "$d/404.html"; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/*/browser
