@@ -25,7 +25,7 @@ jobs:
           for d in dist/*/browser; do cp "$d/index.html" "$d/404.html"; done
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/*/browser
+          path: dist/chennai-final-journey/browser
 
   deploy:
     needs: build
