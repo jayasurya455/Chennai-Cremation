@@ -1,0 +1,86 @@
+<section class="page-hero">
+  <h2>@if(lang()==='en'){Standing beside you}@else{உங்கள் அருகில்}</h2>
+  <p>
+    @if(lang()==='en'){In life's most difficult moments, Chennai Final Journey is just one call away — anytime, day or night.}
+    @else{வாழ்வின் கடினமான தருணங்களில், சென்னை ஃபைனல் ஜர்னி ஒரு அழைப்பு தூரத்தில்.}
+  </p>
+</section>
+
+<section class="section wrap">
+  <div style="max-width:760px;margin:0 auto">
+    <p style="font-size:18px;line-height:1.7;color:var(--on-surface-variant);margin-bottom:24px">
+      @if(lang()==='en') {
+        Chennai Final Journey provides end-to-end cremation and funeral services across Chennai, ensuring every final ritual is performed with respect, peace and tradition. We understand that losing a loved one is one of life's hardest experiences — and that families need a steady, trustworthy hand to lean on.
+      } @else {
+        சென்னை ஃபைனல் ஜர்னி சென்னை முழுவதும் முழுமையான தகனம் மற்றும் இறுதிச் சடங்கு சேவைகளை வழங்குகிறது. ஒவ்வொரு சடங்கும் மரியாதையுடனும் பாரம்பரியத்துடனும் நடத்தப்படுகிறது.
+      }
+    </p>
+    <p style="font-size:18px;line-height:1.7;color:var(--on-surface-variant)">
+      @if(lang()==='en') {
+        With 24×7 availability, experienced support staff and a deep understanding of last-rite customs across all communities, we ensure your loved one's final journey is smooth, sacred and stress-free for the family.
+      } @else {
+        24×7 சேவை, அனுபவமிக்க ஊழியர்கள் மற்றும் அனைத்து சமூக சடங்குகள் பற்றிய ஆழமான புரிதலுடன், உங்கள் அன்புக்குரியவரின் இறுதிப் பயணத்தை அமைதியாக உறுதி செய்கிறோம்.
+      }
+    </p>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="cards three">
+      <div class="icard">
+        <span class="material-symbols-outlined">favorite</span>
+        <h4>@if(lang()==='en'){Our Mission}@else{எங்கள் நோக்கம்}</h4>
+        <p>@if(lang()==='en'){To bring compassion, dignity and calm to families during their most vulnerable moments.}@else{பாதிக்கப்படக்கூடிய தருணங்களில் குடும்பங்களுக்கு இரக்கமும் கௌரவமும் வழங்குதல்.}</p>
+      </div>
+      <div class="icard">
+        <span class="material-symbols-outlined">diversity_3</span>
+        <h4>@if(lang()==='en'){All Communities}@else{அனைத்து சமூகங்கள்}</h4>
+        <p>@if(lang()==='en'){We honour the customs and beliefs of every family we serve, without exception.}@else{நாங்கள் சேவை செய்யும் ஒவ்வொரு குடும்பத்தின் பழக்கவழக்கங்களையும் மதிக்கிறோம்.}</p>
+      </div>
+      <div class="icard">
+        <span class="material-symbols-outlined">handshake</span>
+        <h4>@if(lang()==='en'){Trusted Locally}@else{உள்ளூர் நம்பிக்கை}</h4>
+        <p>@if(lang()==='en'){Trusted by hundreds of Chennai families through their hardest days.}@else{நூற்றுக்கணக்கான சென்னை குடும்பங்களின் நம்பிக்கை.}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Cause -->
+<section class="section wrap">
+  <div class="cause">
+    <div class="body">
+      <h3>@if(lang()==='en'){Our Cause: Dignity for Street Animals}@else{எங்கள் நோக்கம்: தெரு விலங்குகளுக்கு கௌரவம்}</h3>
+      <p>
+        @if(lang()==='en'){Street dogs also deserve dignity in their final moments. Beyond our services, our team provides cremation and burial support for stray animals across the city.}
+        @else{தெரு நாய்களும் இறுதி தருணங்களில் கௌரவத்திற்கு தகுதியானவை. எங்கள் குழு தெரு விலங்குகளுக்கும் ஆதரவளிக்கிறது.}
+      </p>
+      <p>
+        @if(lang()==='en'){This is a humble service we run out of love. Your small donation helps us buy firewood, burial space and arrange transport, so every life can have a peaceful goodbye.}
+        @else{இது அன்பினால் நடத்தும் சேவை. உங்கள் சிறு நன்கொடை ஒவ்வொரு உயிருக்கும் அமைதியான விடைபெறுதலை வழங்க உதவுகிறது.}
+      </p>
+      <a class="btn btn-gold" [href]="cs.waHref" target="_blank" rel="noopener" style="margin-top:8px">
+        <span class="material-symbols-outlined">volunteer_activism</span>
+        @if(lang()==='en'){Support Our Cause}@else{ஆதரவளிக்கவும்}
+      </a>
+    </div>
+    <div class="img"><span class="material-symbols-outlined">pets</span></div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="wrap">
+    <span class="material-symbols-outlined big">support_agent</span>
+    <h2>@if(lang()==='en'){We are here for you, anytime you need us.}@else{நீங்கள் தேவைப்படும் போதெல்லாம் நாங்கள் இருக்கிறோம்.}</h2>
+    <div class="row">
+      <a class="btn btn-gold" [href]="cs.callHref">
+        <span class="material-symbols-outlined">phone</span>{{ cs.phone }}
+      </a>
+      <a class="btn btn-ghost" [href]="cs.waHref" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        @if(lang()==='en'){WhatsApp}@else{வாட்ஸ்அப்}
+      </a>
+    </div>
+  </div>
+</section>

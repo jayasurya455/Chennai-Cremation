@@ -1,0 +1,107 @@
+<section class="page-hero">
+  <h2>@if(lang()==='en'){Contact us anytime}@else{எப்போது வேண்டுமானாலும் தொடர்பு கொள்ளுங்கள்}</h2>
+  <p>
+    @if(lang()==='en'){We are available 24×7. Call us, message us on WhatsApp, or send an enquiry — we'll respond right away.}
+    @else{நாங்கள் 24×7 கிடைக்கிறோம். அழைக்கவும், வாட்ஸ்அப் செய்யவும், அல்லது விசாரணை அனுப்பவும்.}
+  </p>
+</section>
+
+<section class="section wrap">
+  <div class="contact-grid">
+    <!-- Contact details -->
+    <div>
+      <div class="contact-detail">
+        <span class="material-symbols-outlined">call</span>
+        <div>
+          <div class="label">@if(lang()==='en'){Call us 24×7}@else{24×7 அழைக்கவும்}</div>
+          <div class="val">{{ cs.phone }}</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="material-symbols-outlined">chat</span>
+        <div>
+          <div class="label">@if(lang()==='en'){WhatsApp}@else{வாட்ஸ்அப்}</div>
+          <div class="val">
+            <a [href]="cs.waHref" target="_blank" rel="noopener" style="color:var(--tertiary)">
+              @if(lang()==='en'){Message us now}@else{இப்போது செய்தி அனுப்பவும்}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="material-symbols-outlined">location_on</span>
+        <div>
+          <div class="label">@if(lang()==='en'){Service area}@else{சேவை பகுதி}</div>
+          <div class="val">@if(lang()==='en'){All over Chennai}@else{சென்னை முழுவதும்}</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="material-symbols-outlined">photo_camera</span>
+        <div>
+          <div class="label">Instagram</div>
+          <div class="val">
+            <a [href]="cs.instagram" target="_blank" rel="noopener" style="color:var(--tertiary)">&#64;chennaicremation</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <span class="material-symbols-outlined">schedule</span>
+        <div>
+          <div class="label">@if(lang()==='en'){Hours}@else{நேரம்}</div>
+          <div class="val">@if(lang()==='en'){Open 24 hours, every day}@else{தினமும் 24 மணி நேரம்}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enquiry form -->
+    <div class="icard">
+      <h4 style="margin-bottom:6px">@if(lang()==='en'){Send an enquiry}@else{விசாரணை அனுப்பவும்}</h4>
+      <p style="font-size:14px;color:var(--on-surface-variant);margin-bottom:22px">
+        @if(lang()==='en'){Fill this and we'll continue on WhatsApp so we can reach you fast.}
+        @else{இதை நிரப்பவும், வாட்ஸ்அப்பில் தொடர்வோம்.}
+      </p>
+      <form (ngSubmit)="submitEnquiry()">
+        <div class="field">
+          <label for="name_field">@if(lang()==='en'){Your name}@else{உங்கள் பெயர்}</label>
+          <input id="name_field" name="name_field" type="text" autocomplete="name"
+                 [(ngModel)]="formName" required>
+        </div>
+        <div class="field">
+          <label for="phone_field">@if(lang()==='en'){Phone number}@else{தொலைபேசி எண்}</label>
+          <input id="phone_field" name="phone_field" type="tel" autocomplete="tel"
+                 [(ngModel)]="formPhone" required>
+        </div>
+        <div class="field">
+          <label for="msg_field">@if(lang()==='en'){How can we help?}@else{எப்படி உதவ முடியும்?}</label>
+          <textarea id="msg_field" name="msg_field" [(ngModel)]="formMsg"></textarea>
+        </div>
+        <button type="submit" class="btn btn-wa-solid" style="width:100%">
+          <span class="material-symbols-outlined">send</span>
+          @if(lang()==='en'){Send via WhatsApp}@else{வாட்ஸ்அப் மூலம் அனுப்பு}
+        </button>
+        @if(formSent) {
+          <p style="margin-top:14px;font-size:14px;color:var(--tertiary);text-align:center">
+            @if(lang()==='en'){Opening WhatsApp… if it didn't open, please call us directly.}
+            @else{வாட்ஸ்அப் திறக்கிறது… திறக்கவில்லை என்றால், நேரடியாக அழைக்கவும்.}
+          </p>
+        }
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="wrap">
+    <span class="material-symbols-outlined big">emergency</span>
+    <h2>@if(lang()==='en'){Need help right now? Call immediately.}@else{இப்போது உதவி தேவையா? உடனே அழைக்கவும்.}</h2>
+    <div class="row">
+      <a class="btn btn-gold" [href]="cs.callHref">
+        <span class="material-symbols-outlined">phone</span>{{ cs.phone }}
+      </a>
+      <a class="btn btn-ghost" [href]="cs.waHref" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        @if(lang()==='en'){WhatsApp}@else{வாட்ஸ்அப்}
+      </a>
+    </div>
+  </div>
+</section>

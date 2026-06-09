@@ -1,0 +1,25 @@
+<footer>
+  <div class="f-brand">
+    <img class="logo" src="logo.png" alt="Chennai Final Journey">
+    <h3>Chennai Final Journey</h3>
+  </div>
+  <div class="f-row">
+    <span><span class="material-symbols-outlined">phone</span> {{ cs.phone }}</span>
+    <span>
+      <span class="material-symbols-outlined">location_on</span>
+      @if(lang() === 'en') { Available all over Chennai } @else { சென்னை முழுவதும் }
+    </span>
+    <span><span class="material-symbols-outlined">schedule</span> 24×7</span>
+  </div>
+  <div class="f-links">
+    <a routerLink="/human-services">@if(lang()==='en'){Human Services}@else{இறுதிச் சடங்கு}</a>
+    <a routerLink="/pet-services">@if(lang()==='en'){Pet Services}@else{செல்லப்பிராணி}</a>
+    <a routerLink="/about">@if(lang()==='en'){About}@else{எங்களை பற்றி}</a>
+    <a routerLink="/contact">@if(lang()==='en'){Contact}@else{தொடர்பு}</a>
+    <a [href]="cs.instagram" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="f-fine">
+    <p>© 2025 Chennai Final Journey. @if(lang()==='en'){Compassionate support, 24×7.}@else{இரக்கமான ஆதரவு, 24×7.}</p>
+    <p class="small">A unit of Raja Cremation Services.</p>
+  </div>
+</footer>

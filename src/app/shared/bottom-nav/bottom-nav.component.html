@@ -1,0 +1,18 @@
+<nav class="bottom-nav">
+  <a [href]="cs.callHref">
+    <span class="material-symbols-outlined">call</span>
+    @if(lang()==='en'){Call}@else{அழை}
+  </a>
+  <a routerLink="/human-services" routerLinkActive="active">
+    <span class="material-symbols-outlined">spa</span>
+    @if(lang()==='en'){Funeral}@else{சடங்கு}
+  </a>
+  <a routerLink="/pet-services" routerLinkActive="active">
+    <span class="material-symbols-outlined">pets</span>
+    @if(lang()==='en'){Pets}@else{செல்லம்}
+  </a>
+  <a class="primary" [href]="cs.waHref" target="_blank" rel="noopener">
+    <span class="material-symbols-outlined">chat</span>
+    @if(lang()==='en'){WhatsApp}@else{வாட்ஸ்அப்}
+  </a>
+</nav>

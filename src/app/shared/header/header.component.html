@@ -1,0 +1,32 @@
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand has-logo" routerLink="/" (click)="closeMenu()">
+      <img class="logo" src="rounded_logo.png" alt="Chennai Final Journey">
+      <h1>Chennai Final Journey</h1>
+    </a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a routerLink="/human-services" routerLinkActive="active">Human Services</a>
+        <a routerLink="/pet-services" routerLinkActive="active">Pet Services</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      </nav>
+      <button class="lang-toggle" (click)="toggleLang()">{{ langBtnLabel() }}</button>
+      <a class="btn btn-gold nav-call" [href]="cs.callHref">
+        <span class="material-symbols-outlined">phone</span>
+        @if(lang() === 'en') { Call Now } @else { அழைக்க }
+      </a>
+      <button class="hamburger" (click)="toggleMenu()" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <a routerLink="/" (click)="closeMenu()">Home</a>
+    <a routerLink="/human-services" (click)="closeMenu()">Human Services</a>
+    <a routerLink="/pet-services" (click)="closeMenu()">Pet Services</a>
+    <a routerLink="/about" (click)="closeMenu()">About</a>
+    <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+  </div>
+</header>

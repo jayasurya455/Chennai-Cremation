@@ -1,0 +1,83 @@
+<section class="page-hero">
+  <h2>@if(lang()==='en'){Human Funeral Services}@else{இறுதிச் சடங்கு சேவைகள்}</h2>
+  <p>
+    @if(lang()==='en'){From the first call to the final rites, we handle every detail with dignity — so your family can grieve in peace.}
+    @else{முதல் அழைப்பு முதல் இறுதி சடங்கு வரை, ஒவ்வொரு விவரத்தையும் கௌரவத்துடன் கவனிக்கிறோம்.}
+  </p>
+</section>
+
+<section class="section wrap">
+  <div class="cards three">
+    <div class="icard">
+      <span class="material-symbols-outlined">local_shipping</span>
+      <h4>@if(lang()==='en'){Hearse & Ambulance}@else{பிணவண்டி & ஆம்புலன்ஸ்}</h4>
+      <p>@if(lang()==='en'){Well-maintained hearse vans and mortuary ambulance for dignified transport, anywhere in Chennai.}@else{கௌரவமான போக்குவரத்துக்கான பிணவண்டி மற்றும் ஆம்புலன்ஸ்.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">local_fire_department</span>
+      <h4>@if(lang()==='en'){Cremation Arrangement}@else{தகனம் ஏற்பாடு}</h4>
+      <p>@if(lang()==='en'){Booking of cremation grounds or electric furnace slots, with all samagri arranged.}@else{தகன மைதானம் அல்லது மின் அடுப்பு முன்பதிவு, அனைத்து சாமான்களுடன்.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">ac_unit</span>
+      <h4>@if(lang()==='en'){Freezer Box}@else{உறைவிப்பு பெட்டி}</h4>
+      <p>@if(lang()==='en'){High-quality freezer boxes to preserve the body with care until the family is ready.}@else{குடும்பம் தயாராகும் வரை உடலை பாதுகாக்க உயர்தர உறைவிப்பு பெட்டிகள்.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">self_improvement</span>
+      <h4>@if(lang()==='en'){Priest for Last Rites}@else{புரோகிதர் சேவை}</h4>
+      <p>@if(lang()==='en'){Experienced priests and pandits to guide every ritual according to your faith and customs.}@else{உங்கள் நம்பிக்கைப்படி சடங்குகளை வழிநடத்த அனுபவமிக்க புரோகிதர்கள்.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">healing</span>
+      <h4>@if(lang()==='en'){Embalming}@else{உடல் பதப்படுத்துதல்}</h4>
+      <p>@if(lang()==='en'){Professional embalming services where preservation is needed for travel or ceremony.}@else{பயணம் அல்லது சடங்குக்காக தேவைப்படும்போது தொழில்முறை பதப்படுத்துதல்.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">groups</span>
+      <h4>@if(lang()==='en'){Rituals & Memorials}@else{சடங்குகள் & நினைவு}</h4>
+      <p>@if(lang()==='en'){Prayer meetings, memorial events and post-funeral ceremonies, arranged with care.}@else{பிரார்த்தனை கூட்டங்கள், நினைவு நிகழ்வுகள் கவனத்துடன் ஏற்பாடு.}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>@if(lang()==='en'){How it works}@else{எப்படி வேலை செய்கிறது}</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="circle"><span class="material-symbols-outlined">call</span></div>
+        <h4>@if(lang()==='en'){1. Call us}@else{1. அழைக்கவும்}</h4>
+        <p>@if(lang()==='en'){One call, any hour. We respond at once.}@else{எந்த நேரத்திலும் ஒரு அழைப்பு. உடனே பதில்.}</p>
+      </div>
+      <div class="step">
+        <div class="circle"><span class="material-symbols-outlined">assignment</span></div>
+        <h4>@if(lang()==='en'){2. We arrange}@else{2. ஏற்பாடு செய்கிறோம்}</h4>
+        <p>@if(lang()==='en'){Transport, documents, priest, venue — all handled.}@else{போக்குவரத்து, ஆவணம், புரோகிதர் — அனைத்தும்.}</p>
+      </div>
+      <div class="step">
+        <div class="circle"><span class="material-symbols-outlined">self_improvement</span></div>
+        <h4>@if(lang()==='en'){3. Dignified farewell}@else{3. கௌரவமான விடைபெறுதல்}</h4>
+        <p>@if(lang()==='en'){A peaceful ceremony, exactly as your family wishes.}@else{உங்கள் குடும்பம் விரும்பியபடி அமைதியான சடங்கு.}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="wrap">
+    <span class="material-symbols-outlined big">support_agent</span>
+    <h2>@if(lang()==='en'){Talk to us now — we're ready to help.}@else{இப்போது எங்களிடம் பேசுங்கள் — உதவ தயாராக இருக்கிறோம்.}</h2>
+    <div class="row">
+      <a class="btn btn-gold" [href]="cs.callHref">
+        <span class="material-symbols-outlined">phone</span>{{ cs.phone }}
+      </a>
+      <a class="btn btn-ghost" [href]="cs.waHref" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        @if(lang()==='en'){WhatsApp}@else{வாட்ஸ்அப்}
+      </a>
+    </div>
+  </div>
+</section>

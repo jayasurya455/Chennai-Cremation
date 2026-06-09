@@ -1,0 +1,229 @@
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="hero.jpg" alt="Serene dawn light over calm water" (error)="hideHeroImg($event)">
+  </div>
+  <div class="hero-inner">
+    <span class="badge">
+      @if(lang()==='en'){24×7 Available Across Chennai}@else{சென்னை முழுவதும் 24×7 சேவை}
+    </span>
+    <h2>Chennai Final Journey</h2>
+    <p class="tagline">
+      @if(lang()==='en'){Compassionate care. Dignified goodbyes.}@else{இரக்கமான பராமரிப்பு. கௌரவமான விடைபெறுதல்.}
+    </p>
+    <div class="hero-btns">
+      <a class="btn btn-gold" [href]="cs.callHref">
+        <span class="material-symbols-outlined">phone</span>
+        @if(lang()==='en'){Call Now}@else{இப்போது அழைக்கவும்}
+      </a>
+      <a class="btn btn-wa" [href]="cs.waHref" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        @if(lang()==='en'){WhatsApp Us}@else{வாட்ஸ்அப்}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust wrap">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <span class="material-symbols-outlined">schedule</span>
+      <span class="t">@if(lang()==='en'){24×7 Support}@else{24×7 ஆதரவு}</span>
+    </div>
+    <div class="trust-item">
+      <span class="material-symbols-outlined">groups</span>
+      <span class="t">@if(lang()==='en'){All Communities}@else{அனைத்து சமூகங்களும்}</span>
+    </div>
+    <div class="trust-item">
+      <span class="material-symbols-outlined">volunteer_activism</span>
+      <span class="t">@if(lang()==='en'){Handled with Respect}@else{மரியாதையுடன்}</span>
+    </div>
+    <div class="trust-item">
+      <span class="material-symbols-outlined">verified_user</span>
+      <span class="t">@if(lang()==='en'){Trusted by Families}@else{குடும்பங்களின் நம்பிக்கை}</span>
+    </div>
+  </div>
+</section>
+
+<!-- Service paths -->
+<section class="section wrap">
+  <div class="section-head">
+    <h2>@if(lang()==='en'){How can we help?}@else{நாங்கள் எப்படி உதவ முடியும்?}</h2>
+    <p>
+      @if(lang()==='en'){We care for every member of your family — with the same dignity and compassion.}
+      @else{உங்கள் குடும்பத்தின் ஒவ்வொரு உறுப்பினரையும் கவனித்துக்கொள்கிறோம்.}
+    </p>
+  </div>
+  <div class="wrap cards two">
+    <a class="path human" routerLink="/human-services">
+      <span class="ghost-icon"><span class="material-symbols-outlined">spa</span></span>
+      <div>
+        <span class="material-symbols-outlined lead">spa</span>
+        <h3>@if(lang()==='en'){Human Funeral Services}@else{இறுதிச் சடங்கு சேவைகள்}</h3>
+        <p>
+          @if(lang()==='en'){Complete, respectful arrangement of final rites — transport, rituals, cremation and memorials, handled end to end.}
+          @else{போக்குவரத்து, சடங்குகள், தகனம் மற்றும் நினைவு நிகழ்வுகள் வரை அனைத்தும்.}
+        </p>
+      </div>
+      <span class="more">
+        @if(lang()==='en'){View services}@else{சேவைகளைக் காண்க}
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </span>
+    </a>
+    <a class="path pet" routerLink="/pet-services">
+      <span class="ghost-icon"><span class="material-symbols-outlined">pets</span></span>
+      <div>
+        <span class="material-symbols-outlined lead">pets</span>
+        <h3>@if(lang()==='en'){Pet Farewell Services}@else{செல்லப்பிராணி சேவைகள்}</h3>
+        <p>
+          @if(lang()==='en'){Because they were family too. Dignified pet cremation and burial, with individual ash collection.}
+          @else{அவர்களும் குடும்பம்தான். கௌரவமான செல்லப்பிராணி தகனம் மற்றும் அடக்கம்.}
+        </p>
+      </div>
+      <span class="more">
+        @if(lang()==='en'){View services}@else{சேவைகளைக் காண்க}
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>@if(lang()==='en'){How it works}@else{எப்படி வேலை செய்கிறது}</h2>
+      <p>
+        @if(lang()==='en'){One call is all it takes. We carry the rest.}
+        @else{ஒரு அழைப்பு போதும். மீதியை நாங்கள் கவனித்துக்கொள்கிறோம்.}
+      </p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="circle"><span class="material-symbols-outlined">call</span></div>
+        <h4>@if(lang()==='en'){1. Call us anytime}@else{1. எப்போது வேண்டுமானாலும் அழைக்கவும்}</h4>
+        <p>
+          @if(lang()==='en'){Reach our 24×7 helpline. We respond immediately, day or night.}
+          @else{எங்கள் 24×7 உதவி எண்ணை அழைக்கவும். உடனடியாக பதிலளிக்கிறோம்.}
+        </p>
+      </div>
+      <div class="step">
+        <div class="circle"><span class="material-symbols-outlined">assignment</span></div>
+        <h4>@if(lang()==='en'){2. We arrange everything}@else{2. அனைத்தையும் ஏற்பாடு செய்கிறோம்}</h4>
+        <p>
+          @if(lang()==='en'){Transport, documentation, priest and ceremonial needs — all coordinated for you.}
+          @else{போக்குவரத்து, ஆவணங்கள், புரோகிதர் — அனைத்தையும் ஒருங்கிணைக்கிறோம்.}
+        </p>
+      </div>
+      <div class="step">
+        <div class="circle"><span class="material-symbols-outlined">self_improvement</span></div>
+        <h4>@if(lang()==='en'){3. A peaceful farewell}@else{3. அமைதியான விடைபெறுதல்}</h4>
+        <p>
+          @if(lang()==='en'){A dignified conclusion, so you can focus on family and grieving.}
+          @else{கௌரவமான முடிவு — நீங்கள் குடும்பத்துடன் இருக்கலாம்.}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why choose us -->
+<section class="section wrap">
+  <div class="section-head">
+    <h2>@if(lang()==='en'){Why families trust us}@else{குடும்பங்கள் ஏன் நம்புகிறார்கள்}</h2>
+  </div>
+  <div class="cards four">
+    <div class="icard">
+      <span class="material-symbols-outlined">favorite</span>
+      <h4>@if(lang()==='en'){Compassion first}@else{இரக்கம் முதலில்}</h4>
+      <p>@if(lang()==='en'){We treat every family the way we would want our own to be treated.}@else{ஒவ்வொரு குடும்பத்தையும் எங்களுடையதைப் போல நடத்துகிறோம்.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">paid</span>
+      <h4>@if(lang()==='en'){Fair & transparent}@else{நியாயமான விலை}</h4>
+      <p>@if(lang()==='en'){Clear pricing with no hidden charges during a difficult time.}@else{மறைக்கப்பட்ட கட்டணங்கள் இல்லை. தெளிவான விலை.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">schedule</span>
+      <h4>@if(lang()==='en'){Always available}@else{எப்போதும் கிடைக்கும்}</h4>
+      <p>@if(lang()==='en'){24×7, every day of the year. Grief does not keep office hours.}@else{ஆண்டு முழுவதும் 24×7 சேவை.}</p>
+    </div>
+    <div class="icard">
+      <span class="material-symbols-outlined">workspace_premium</span>
+      <h4>@if(lang()==='en'){Experienced team}@else{அனுபவமிக்க குழு}</h4>
+      <p>@if(lang()==='en'){Staff who understand last-rite customs across all communities.}@else{அனைத்து சமூக சடங்குகளையும் அறிந்த ஊழியர்கள்.}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Our cause -->
+<section class="section bg-surface">
+  <div class="wrap">
+    <div class="cause">
+      <div class="body">
+        <h3>@if(lang()==='en'){Our Cause: Dignity for Street Animals}@else{எங்கள் நோக்கம்: தெரு விலங்குகளுக்கு கௌரவம்}</h3>
+        <p>
+          @if(lang()==='en'){Street dogs also deserve dignity in their final moments. Our team provides cremation and burial support for stray animals across Chennai.}
+          @else{தெரு நாய்களும் இறுதி தருணங்களில் கௌரவத்திற்கு தகுதியானவை. நாங்கள் ஆதரவளிக்கிறோம்.}
+        </p>
+        <p>
+          @if(lang()==='en'){Your small donation helps us provide firewood, burial space and transport — so they too can have a peaceful goodbye.}
+          @else{உங்கள் சிறு நன்கொடை அவர்களுக்கு அமைதியான விடைபெறுதலை வழங்க உதவுகிறது.}
+        </p>
+        <a class="btn btn-gold" [href]="cs.waHref" target="_blank" rel="noopener" style="margin-top:8px">
+          <span class="material-symbols-outlined">volunteer_activism</span>
+          @if(lang()==='en'){Support Our Cause}@else{ஆதரவளிக்கவும்}
+        </a>
+      </div>
+      <div class="img"><span class="material-symbols-outlined">pets</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section wrap">
+  <div class="section-head">
+    <h2>@if(lang()==='en'){Words from families we've served}@else{நாங்கள் சேவை செய்த குடும்பங்கள்}</h2>
+  </div>
+  <div class="cards two">
+    <div class="quote">
+      <span class="mark">"</span>
+      @if(lang()==='en') {
+        <p>They arrived within the hour and handled everything with such gentleness. In our hardest moment, they carried the weight so we could simply be with our father.</p>
+      } @else {
+        <p>ஒரு மணி நேரத்தில் வந்து அனைத்தையும் மென்மையாக கவனித்தனர். எங்கள் கடினமான தருணத்தில் பெரிதும் உதவினர்.</p>
+      }
+      <span class="who">— Ramesh K., Adyar</span>
+    </div>
+    <div class="quote">
+      <span class="mark">"</span>
+      @if(lang()==='en') {
+        <p>We didn't know where to begin. One phone call and they guided us through every step with patience and respect. Truly grateful.</p>
+      } @else {
+        <p>எங்கே தொடங்குவது என்று தெரியவில்லை. ஒரு அழைப்பில் ஒவ்வொரு படியிலும் பொறுமையாக வழிநடத்தினர்.</p>
+      }
+      <span class="who">— Lakshmi S., Velachery</span>
+    </div>
+  </div>
+  <p class="center" style="margin-top:24px;color:var(--on-surface-variant);font-size:13px">
+    <em>@if(lang()==='en'){Placeholder testimonials — replace with real family messages.}@else{மாதிரி கருத்துக்கள் — உண்மையான கருத்துக்களுடன் மாற்றவும்.}</em>
+  </p>
+</section>
+
+<!-- Final CTA -->
+<section class="section final-cta">
+  <div class="wrap">
+    <span class="material-symbols-outlined big">support_agent</span>
+    <h2>@if(lang()==='en'){We are here for you, anytime you need us.}@else{நீங்கள் தேவைப்படும் போதெல்லாம் நாங்கள் இருக்கிறோம்.}</h2>
+    <div class="row">
+      <a class="btn btn-gold" [href]="cs.callHref">
+        <span class="material-symbols-outlined">phone</span>{{ cs.phone }}
+      </a>
+      <a class="btn btn-ghost" [href]="cs.waHref" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">chat</span>
+        @if(lang()==='en'){WhatsApp}@else{வாட்ஸ்அப்}
+      </a>
+    </div>
+  </div>
+</section>
