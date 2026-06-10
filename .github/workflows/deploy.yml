@@ -37,12 +37,13 @@ jobs:
           NG_APP_WA_NUMBER: ${{ vars.WA_NUMBER }}
           NG_APP_INSTAGRAM_PAGE: ${{ vars.INSTAGRAM_PAGE }}
       - name: Build
-        run: ./node_modules/.bin/ng build --base-href "/Chennai-Cremation/" --configuration production
+        run: npm run build -- --base-href "/Chennai-Cremation/" --configuration production
       - name: Copy index.html to 404.html (SPA routing)
-        run: cp dist/*/browser/index.html dist/*/browser/404.html
+        run: |
+          for d in dist/*/browser; do cp "$d/index.html" "$d/404.html"; done
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/*/browser
+          path: dist/chennai-final-journey/browser
 
   deploy:
     needs: build
