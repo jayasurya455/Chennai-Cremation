@@ -36,8 +36,24 @@ jobs:
           NG_APP_CONTACT_PHONE: ${{ vars.CONTACT_PHONE }}
           NG_APP_WA_NUMBER: ${{ vars.WA_NUMBER }}
           NG_APP_INSTAGRAM_PAGE: ${{ vars.INSTAGRAM_PAGE }}
+      - name: Show injected production config
+        run: |
+          echo "::group::Injected environment.prod.ts"
+          cat src/environments/environment.prod.ts
+          echo "::endgroup::"
       - name: Build
         run: npm run build -- --base-href "/Chennai-Cremation/" --configuration production
+      - name: Verify contact number is baked into the bundle
+        run: |
+          PHONE="${NG_APP_CONTACT_PHONE:-8248395391}"
+          if grep -q "$PHONE" dist/chennai-final-journey/browser/main-*.js; then
+            echo "Deployed bundle contains contact number: $PHONE"
+          else
+            echo "Contact number $PHONE NOT found in built bundle" >&2
+            exit 1
+          fi
+        env:
+          NG_APP_CONTACT_PHONE: ${{ vars.CONTACT_PHONE }}
       - name: Copy index.html to 404.html (SPA routing)
         run: |
           for d in dist/*/browser; do cp "$d/index.html" "$d/404.html"; done
