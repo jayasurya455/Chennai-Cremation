@@ -1,27 +1,30 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
-export const CONTACT = {
-  phone: '8248395391',
-  phoneAlt: '9791336571',
-  waNumber: '918248395391',
-  instagram: 'https://instagram.com/chennaicremation',
-  callHref: 'tel:+918248395391',
-  waMsg: 'Hello, I need assistance with funeral/cremation services. Please call me back.',
-  get waHref() {
-    return `https://wa.me/${this.waNumber}?text=${encodeURIComponent(this.waMsg)}`;
-  }
-};
+interface Config {
+  contactPhone: string;
+  whatsappNumber: string;
+  instagram: string;
+}
 
 @Injectable({ providedIn: 'root' })
+
 export class ContactService {
-  readonly phone = CONTACT.phone;
-  readonly phoneAlt = CONTACT.phoneAlt;
-  readonly callHref = CONTACT.callHref;
-  readonly waHref = CONTACT.waHref;
-  readonly instagram = CONTACT.instagram;
+  private config: Config = {
+    contactPhone: environment.contactPhone,
+    whatsappNumber: environment.waNumber,
+    instagram: environment.instagram,
+  };
+
+
+  phone: string = this.config.contactPhone;
+  callHref: string = `tel:+91${this.config.contactPhone}`;
+  instagram: string = this.config.instagram;
+  waMsg: string = 'Hello, I need assistance with funeral/cremation services. Please call me back.';
+  waHref: string = `https://wa.me/${this.config.whatsappNumber}?text=${encodeURIComponent(this.waMsg)}`
 
   buildEnquiryWaHref(name: string, phone: string, message: string): string {
     const text = `New enquiry — Chennai Final Journey\nName: ${name}\nPhone: ${phone}\nMessage: ${message || '(none)'}`;
-    return `https://wa.me/${CONTACT.waNumber}?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/${this.config.whatsappNumber}?text=${encodeURIComponent(text)}`;
   }
 }
